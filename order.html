@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+
+    
+    <!-- Bootstrap CDN Links-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom External CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+    <script src="js/responsive.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <header class="header header-products">
+        <h1 class="header-title">Order</h1>
+        <div></div>
+    </header>
+
+    <!-- Navigation Menu Bar-->
+    <div class="toggle" onclick="showMenu()">
+        <div class="switch">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="naviBar" id="menu">
+        <div style="width:400px">
+            <a href="index.html">Home</a>
+        </div>
+        <div style="width:400px">
+            <a href="products.html">Products</a>
+        </div>
+        <div style="width:400px">
+            <a href="order.html">Order</a>
+        </div>
+    </div>
+   
+    <br>
+    <div class="contact-form">
+
+        <form name="contact" onsubmit="validateForm()">
+            <h2 style="text-align: center;">Order Now</h2>
+            <hr>
+           
+         
+
+            <div class="form-group">
+                <label for="cakeName">Cake name:</label>
+                <div class="errorgroup">
+                    <select  class="form-control" name="cakes" id="cakes" required>
+                        <option value="placeholder">--- Select cake ---</option>
+                        <option value="cakeOne">Coconut Bundt Cake</option>
+                        <option value="cakeTwo">Cream Cheese Pound Cake</option>
+                        <option value="cakeThree">German Chocolate Cake</option>
+                        <option value="cakeFour">Classic Yellow Cake</option>
+                    </select>
+                    <p id="error1" class="errortext">Please Select Our Product</p>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="check">bootstrap styling checking</label>
+                <input type="text" name="check" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="yourName">Your name:</label>
+                <div class="errorgroup">
+                    <input class="form-control" name="yourName" type="text">
+                    <p id="error2" class="errortext">Please fill out your name.</p>
+                    <p id="error3" class="errortext">Name cannot exceed 100 charcters</p>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <div class="errorgroup">
+                    <input class="form-control" name="message" type="text" placeholder="type your text you want written on the cake">
+                    <p id="error4" class="errortext">Message should not exceed 30 characters.</p>
+                    <p id="error10" class="errortext">Please Enter a Message</p>
+                </div>
+            </div>
+
+
+
+            <div class="form-group check"> <label for="includes">Includes:</label>
+                <div class="checkbox-inner">
+
+                    <div class="candle-inner">
+                        <input type="checkbox" id="candle" name="candle" value="Candle">
+                        <label for="candle">Candle</label>
+                    </div>
+
+                    <div class="candle-inner">
+                        <input type="checkbox" id="candle" name="firework" value="firework">
+                        <label for="candle">Firework</label>
+                    </div>
+
+                    <div class="candle-inner">
+                        <input type="checkbox" id="candle" name="toys" value="toys">
+                        <label for="candle">Toys</label>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="date">Deliver Date:</label>
+                <div class="errorgroup">
+                    <input class="form-control" type="date" id="date" name="date">
+                    <p id="error5" class="errortext">Please fill out the deliver date</p>
+                </div>
+
+            </div>
+
+ 
+
+            <div class="form-group">
+                <label for='deliverTo'>Deliver to:</label>
+                <div class="errorgroup">
+                    <textarea name='deliverTo' class="form-control" id="deliverTo" cols="30" rows="5"></textarea>
+                    <p id="error6" class="errortext">Please fill out the address</p>
+                    <p id="error7" class="errortext">Address should not exceed 500 characters</p>
+                </div>
+            </div>
+         
+
+            <div class="form-group call">
+                <label for="callBefore">Call before deliver?</label>
+                <div class="Call-buttons">
+                    <input type='radio' id="yes" name="callBefore" value="Yes">
+                    <label for="yes"> Yes</label>
+                    <input type='radio' id="no" name="callBefore" value="No">
+                    <label for="no"> No</label>
+                </div>
+            </div>
+
+        
+
+            <div class="form-group">
+                <div class="cl"></div>
+                <div class="sm">
+                    <button type="submit"  id="submit" class="submit" name="submit" value="bar">Order Now</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+ 
+    <footer class="footer footer-products"><hr>
+        &copy; 2023 by Chi's Cake
+    </footer>
+
+    <script src="Scripts/order.js"></script>
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+
+*{
+    box-sizing:content-box;
+}
+html,body {
+    padding: 0;
+    font-family: Palatino, "Palatino Linotype";
+    color: rgb(105, 69, 69) !important;
+    overflow:scroll;
+}
+
+/*************************************/
+/* NAVIGATION BAR STYLNG*************/
+.naviBar{
+    display: flex;
+    text-align: center;
+    padding-left: 1cm;
+    padding-top:1em;
+
+}
+.naviBar a{
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+.naviBar a:hover{
+   text-decoration:solid;
+   transform: scale(1.2);
+}
+.toggle{
+    display: none;
+   }
+
+.toggle .switch{
+    width: 50px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+ 
+    
+}
+.toggle .switch span{
+    background-color: #976565;
+    width: 70%;
+    height: 2px;
+    margin: 2px 0px;
+   
+}
+
+
+a,a:link,a:visited {
+    color: rgb(105, 69, 69);
+}
+
+hr {
+    color: rgb(105, 69, 69);
+    background-color: #694545;
+    
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    position: relative;
+    margin-top: auto;
+    padding: 0;
+    width:100%;
+
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/A_black_background.jpg/640px-A_black_background.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header-title {
+    background-color: #eba1a17c;
+    color: white;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+
+}
+
+.nav-date {
+    font-size: 1.2rem;
+}
+
+.cake-title {
+    font-weight: bolder;
+}
+
+.cake-description {
+   
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+.cake-footer {
+    font-weight: bolder;
+}
+
+footer {
+    padding-bottom: 0.7rem;
+    text-align: center;
+}
+
+.footer-contact {
+    bottom: 0;
+    position: absolute;
+}
+
+.contact-form h1 {
+
+    margin-bottom: 0px;
+    font-size: 50px;
+}
+
+form {
+    margin-left: 5 px;
+}
+
+textarea {
+    resize: none;
+}
+
+
+input,
+textarea,
+select {
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    border-color:#c58383 !important;
+}
+
+
+select {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*
+input[type=text],
+input[type=date],
+input[type=email],
+textarea {
+    padding: 20px;
+    width: 100%;
+    color: rgb(105, 69, 69);
+    border: 2px solid rgb(105, 69, 69);
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-family: 'Dancing Script', cursive;
+}
+*/
+
+select {
+    padding: 20px;
+    width: 100%;
+    color: rgb(105, 69, 69);
+    border: 2px solid rgb(105, 69, 69);
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+
+/*
+.form-group {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+*/
+
+.check {
+    border: 0px white solid;
+}
+
+.checkbox-inner {
+    flex-direction: column;
+    display: flex;
+    justify-content: baseline;
+    width: 635px;
+
+}
+
+.Call-buttons {
+    margin-right: 30px;
+    display: flex;
+}
+.Call-buttons label{
+ margin-left: 10px;
+}
+#submit {
+    cursor: pointer;
+    background: rgb(139, 93, 93);
+    border: none;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.errorgroup {
+    display: flex;
+    flex-direction: column;
+}
+.sm {
+    display: flex;
+    justify-content: baseline;
+}
+
+.errortext {
+    color: red;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#error1
+#error2,#error3,#error4,#error5,#error6,#error7,#error10,#error11,#error12,#error13,#error14,#error15,#error16,#error17 {
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+/*Styling for Screen Width Greater than 992px */
+@media screen and (min-width: 992px){
+  p{
+      font-size: 1.5rem;
+  }
+  .cake-description{
+      font-size: 1.5rem;
+  }
+  label{
+      font-size: 1.5rem;
+  }
+}
+
+/*Styling for Screen Width smaller than 992px */
+@media screen and (max-width: 992px){
+    p{
+        font-size: 1.2rem;
+    }
+    label{
+        font-size: 1.2rem;
+    }
+    .cake-description{
+        font-size: 1.2rem
+    }
+    .sm{ justify-content: flex-start; }
+ 
+    
+}
+
+/*Styling for Screen Width Smaller than 768px */
+@media screen and (max-width: 768px)
+{
+    p{
+        font-size: 1.2rem;
+    }
+    .cake-description{
+        font-size: 1.2rem;
+    }
+   .naviBar
+    {
+      display: none;
+      flex-direction: column;
+      background-color: #f3cfcf;
+      text-align: center;
+    }
+  .toggle
+    {
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    } 
+  .naviBar a{ border-bottom: 1px solid white; }
+  .sm{ justify-content: flex-end; }
+}
